@@ -4,7 +4,7 @@ import math
 import sys
 import time
 import threading
-from msvcrt import getch, kbhit
+# from msvcrt import getch, kbhit
 
 from PIL import Image
 import os
@@ -102,15 +102,13 @@ def main():
     start_time = 0
     while 1:
 
-        if kbhit():
-            if getch() == b'\xe0':
-                char = getch()
-                if char == b'K':  # on left arrow press
-                    pass  # eventually go back somehow ill have to store old frames or smth
-                elif char == b'M':  # on left arrow press
-                    frames_to_skip = math.floor(fps * 5)  # skips 5 seconds of video
-                    for i in range(frames_to_skip):
-                        frames.read()
+        # if kbhit():
+        #     if getch() == b'\xe0':
+        #         char = getch()
+        #         elif char == b'M':  # on left arrow press
+        #             frames_to_skip = math.floor(fps * 5)  # skips 5 seconds of video
+        #             for i in range(frames_to_skip):
+        #                 frames.read()
 
         if counter <= 0:
             resize()
